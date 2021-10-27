@@ -37,7 +37,7 @@ public class Person {
         Statement stmt = sqlConnection.createStatement();
         stmt.execute(String.format("""
                 INSERT INTO Persons (firstName, lastName, birthday)
-                VALUES ('%s', '%s', %s)
+                VALUES ('%s', '%s', '%s')
                 """,
                 firstName(),
                 lastName(),
