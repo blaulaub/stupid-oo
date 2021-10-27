@@ -21,7 +21,7 @@ public class Person {
     // exposed, extrinsic
 
     // attributes, by local law
-    public boolean canLegallyBuyBeer() { throw new RuntimeException("not implemented"); }
+    public boolean canLegallyBuyBeer() { return !LocalDate.now().isBefore(birthday().plusYears(16)); }
 
     // behavior, by chosen technology
     public void saveToSqlDb(String connectionString) { throw new RuntimeException("not implemented"); }
