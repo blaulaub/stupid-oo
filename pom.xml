@@ -15,6 +15,14 @@
         <project.build.outputEncoding>UTF-8</project.build.outputEncoding>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.4.200</version>
+        </dependency>
+    </dependencies>
+
     <build>
         <plugins>
             <plugin>
