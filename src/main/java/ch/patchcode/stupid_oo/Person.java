@@ -1,5 +1,6 @@
 package ch.patchcode.stupid_oo;
 
+import java.sql.Connection;
 import java.time.LocalDate;
 
 public class Person {
@@ -24,8 +25,8 @@ public class Person {
     public boolean canLegallyBuyBeer() { return !LocalDate.now().isBefore(birthday().plusYears(16)); }
 
     // behavior, by chosen technology
-    public void saveToSqlDb(String connectionString) { throw new RuntimeException("not implemented"); }
-    public static Person loadFromSqlDb(String connectionString) { throw new RuntimeException("not implemented"); }
+    public void saveToSqlDb(Connection sqlConnection) { throw new RuntimeException("not implemented"); }
+    public static Person loadFromSqlDb(Connection sqlConnection) { throw new RuntimeException("not implemented"); }
 
     // =========================================================================
     // encapsulated, inherent
