@@ -5,7 +5,7 @@ import java.time.LocalDate;
 public class Person {
 
     // =========================================================================
-    // exposed
+    // exposed, inherent
 
     // properties
     public String firstName() { return firstName; }
@@ -18,7 +18,17 @@ public class Person {
     }
 
     // =========================================================================
-    // encapsulated
+    // exposed, extrinsic
+
+    // attributes, by local law
+    public boolean canLegallyBuyBeer() { throw new RuntimeException("not implemented"); }
+
+    // behavior, by chosen technology
+    public void saveToSqlDb(String connectionString) { throw new RuntimeException("not implemented"); }
+    public static Person loadFromSqlDb(String connectionString) { throw new RuntimeException("not implemented"); }
+
+    // =========================================================================
+    // encapsulated, inherent
 
     private String firstName;
     private String lastName;
